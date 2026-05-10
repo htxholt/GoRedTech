@@ -177,8 +177,7 @@ header {
     justify-content: center;
     text-align: center;
     color: var(--white-color);
-    padding-top:20px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .hero-content h1 {

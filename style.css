@@ -82,6 +82,16 @@ header {
     z-index: 1000;
 }
 
+.announcement-bar {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;

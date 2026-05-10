@@ -170,14 +170,14 @@ header {
 /* ================== HERO SECTION (UPDATED) ================== */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('unnamed.jpg') no-repeat center center/cover;
-    height: 60vh; /* Reduced from 100vh */
+    height: 80vh; /* Reduced from 100vh */
     min-height: 450px; /* Ensures it doesn't get too small on short screens */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white-color);
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .hero-content h1 {

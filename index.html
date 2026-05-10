@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedTech LLC - Tech & Manufacturing Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================== HEADER & NAVIGATION ================== -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="nav-branding">RedTech<!--<img src='logo.png' alt:"RedTech">--.</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                    <!-- Dropdown Menu for Services -->
+                    <ul class="dropdown-menu">
+                        <li><a href="#services">3D Printing</a></li>
+                        <li><a href="#services">Laser Engraving</a></li>
+                        <li><a href="#services">Advanced Tech</a></li>
+                    </ul>
+                </li>
+                <!--<li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>-->
+                <li class="nav-item"><a href="#contact" class="nav-link nav-contact-btn">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================== HERO SECTION ================== -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Customized Tech Solutions & Innovative Manufacturing</h1>
+                <p>Nationwide services in secure, private technology infrastructure, 3D printing, and laser engraving for your business.</p>
+                <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+            </div>
+        </section>
+
+        <!-- ================== SERVICES SECTION ================== -->
+        <section id="services" class="page-section">
+            <h2 class="section-heading">Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card tech-service">
+                    <h3>Advanced Tech Services</h3>
+                    <p>Bespoke IT infrastructure, private AI (Local LLMs), and digital sovereignty solutions for businesses that demand security and control.</p>
+                    <a href="#contact" class="btn">Explore Tech Solutions</a>
+                </div> 
+                <div class="service-card">
+                    <h3>3D Printing</h3>
+                    <p>From rapid prototypes to functional parts, we bring your digital designs to life with precision and a wide range of materials.</p>
+                    <a href="#contact" class="btn">Request a Quote</a>
+                </div>
+                <div class="service-card">
+                    <h3>Laser Engraving</h3>
+                    <p>Add a permanent, personal touch. We engrave on wood, metal, acrylic, and more for branding or custom gifts.</p>
+                    <a href="#contact" class="btn">Start a Project</a>
+                </div>
+               
+            </div>
+        </section>
+
+        <!-- ================== ABOUT US SECTION ================== -->
+        <section id="about" class="page-section bg-light">
+            <h2 class="section-heading">About Us</h2>
+            <div class="about-content">
+                <p>We are a team of engineers, designers, and IT architects distributed across the United States, united by a passion for technology and innovation. Our mission is to provide powerful, decentralized solutions to individuals and corporations, giving them control over their data and physical creations. Whether it's a complex VDI deployment or a single custom-engraved item, we deliver excellence and expertise, no matter where you are.</p>
+            </div>
+        </section>
+
+       <!-- ================== REVIEWS SECTION ================== -->
+       <!-- <section id="reviews" class="page-section">
+            <h2 class="section-heading">What Our Clients Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"The VDI setup was seamless. Our remote team was up and running in days, not weeks. The security and performance are top-notch."</p>
+                    <cite>– IT Director, Mid-Sized Legal Firm</cite>
+                </div>
+                <div class="review-card">
+                    <p>"Incredible quality on the 3D prints. The prototypes were exactly to spec and delivered ahead of schedule. Highly recommend!"</p>
+                    <cite>– Founder, Hardware Startup</cite>
+                </div>
+                <div class="review-card">
+                    <p>"Finally, a local LLM that just works. Our data stays on-premise, and the AI is surprisingly powerful. This is the future."</p>
+                    <cite>– CEO, Healthcare Tech Company</cite>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ================== CONTACT SECTION ================== -->
+        <section id="contact" class="page-section bg-dark">
+            <h2 class="section-heading">Let's Build Something Together</h2>
+            <!--<form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <select name="service_interest" required>
+                    <option value="" disabled selected>I'm interested in...</option>
+                    <option value="3d_printing">3D Printing</option>
+                    <option value="laser_engraving">Laser Engraving</option>
+                    <option value="tech_services">Advanced Tech Services</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your project..." rows="6" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>-->
+            <H3 style='color:white'> Call us at: <a href='tel:+1-832-657-1444'>(832) 657-1444</a> <br>
+            or Email us at <a href='mailto:chad@goredtech.com'>chad@goredtech.com</a></H3>
+        </section>
+    </main>
+
+    <!-- ================== FOOTER ================== -->
+    <footer>
+        <p>&copy; 2026 RedTech LLC. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ================== JAVASCRIPT ================== -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+
+</body>
+</html>

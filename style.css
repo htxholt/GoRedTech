@@ -82,6 +82,11 @@ header {
     z-index: 1000;
 }
 
+.nav-branding img {
+    max-height: 50px; 
+    width: auto;
+}
+
 .announcement-bar {
     background-color: var(--accent-color);
     color: white;

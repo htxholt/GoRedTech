@@ -10,7 +10,7 @@ import shutil
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "site-src"
 DIST = ROOT / "dist"
-ASSET_VERSION = "2"
+ASSET_VERSION = "3"
 PAGES = {
     "index.html": ("home.html", "RedTech | Systems, Automation & Web Consulting", "Houston-based consulting that removes repetitive work, restores failing systems, and builds useful digital tools.", "page-home", "home"),
     "solutions.html": ("solutions.html", "Fixed-Scope Solutions | RedTech", "Explore focused RedTech engagements for business automation, revenue-ready websites, and critical systems recovery.", "page-solutions", "solutions"),

@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.primary-nav');
     if (!toggle || !menu) return;
 
-    const closeMenu = () => {
+    const closeMenu = (restoreFocus = false) => {
         toggle.setAttribute('aria-expanded', 'false');
         toggle.querySelector('.sr-only').textContent = 'Open navigation';
         menu.classList.remove('is-open');
         document.body.classList.remove('menu-open');
+        if (restoreFocus) toggle.focus();
     };
 
     toggle.addEventListener('click', () => {
@@ -22,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('menu-open', open);
     });
     menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu(true);
+    });
     window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
 });

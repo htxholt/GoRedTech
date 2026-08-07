@@ -1,4 +1,8 @@
-(() => {
+// Mark JavaScript availability before CSS renders so mobile navigation has no layout flash.
+document.documentElement.classList.add('js');
+
+document.addEventListener('DOMContentLoaded', () => {
+    // One accessible navigation state shared across every generated page.
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.primary-nav');
     if (!toggle || !menu) return;
@@ -19,5 +23,5 @@
     });
     menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
     document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-    window.addEventListener('resize', () => { if (window.innerWidth > 800) closeMenu(); });
-})();
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+});
